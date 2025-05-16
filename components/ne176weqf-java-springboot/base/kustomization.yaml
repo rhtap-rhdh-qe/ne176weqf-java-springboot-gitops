@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: ne176weqf-java-springboot
+  janus-idp.io/tekton: ne176weqf-java-springboot
+  backstage.io/kubernetes-id: ne176weqf-java-springboot
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: ne176weqf-java-springboot
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
